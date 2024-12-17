@@ -1,0 +1,42 @@
+body {
+  background-image: linear-gradient(to top, #09203f 100%, #537895 0%);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#clock {
+  backdrop-filter: blur(50px);
+  color: white;
+}
+
+.container::before {
+  content: '';
+  width: 180px;
+  height: 180px;
+  background: #f41b75;
+  border-radius: 5px;
+  left: 10%;
+  top: 15%;
+  position: absolute;
+  z-index: -1;
+}
+
+.container::after {
+  content: '';
+  width: 180px;
+  height: 180px;
+  background: #6233bb;
+  border-radius: 50%;
+  right: 10%;
+  top: -10%;
+  position: absolute;
+  z-index: -1;
+}
+
+.parent::after {
+  content: 'Digital Clock';
+  position: absolute;
+  left: 45%;
+  top: -10%;
+  font-size: 24px;
+  color: white;
+}
